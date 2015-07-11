@@ -1,8 +1,9 @@
-logs/*
+logs/
 !.gitkeep
 node_modules/
 bower_components/
 tmp
+Component-preload.js
 .DS_Store
 .idea
 .log
