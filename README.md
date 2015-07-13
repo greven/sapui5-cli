@@ -46,7 +46,7 @@ npm start
 ```
 
 ## Commands
-**TODO:**
+Todo
 
 ## Project Structure
-**TODO:**
+Todo
