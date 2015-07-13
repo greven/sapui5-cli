@@ -2,16 +2,19 @@ var gulp  = require('gulp'),
 merge = require('merge2'),
 uglify = require('gulp-uglify'),
 prettyData = require('gulp-pretty-data'),
-ui5Preload = require('gulp-openui5-preload'),
 jshint = require('gulp-jshint'),
 sass = require('gulp-sass'),
-connect = require('gulp-connect');
-
+autoprefixer = require('gulp-autoprefixer'),
+minifycss = require('gulp-minify-css'),
+rename = require('gulp-rename'),
+connect = require('gulp-connect'),
+watch = require('gulp-watch'),
+ui5Preload = require('gulp-openui5-preload');
 
 // Default task
-gulp.task('default', ['webserver', 'livereload', 'watch'], function() {
+gulp.task('default', ['webserver', 'watch', 'livereload'], function() {
     gulp.start('preload');
-    gulp.start('build-css');
+    gulp.start('sass');
 });
 
 // JShint task
@@ -32,15 +35,19 @@ gulp.task('webserver', function() {
 
 // Watch for changes in the CSS and refresh browser
 gulp.task('livereload', function() {
-    gulp.src(['WebContent/*.html', 'WebContent/*.js', 'WebContent/**/*.js',
-    'WebContent/**/*.css', 'WebContent/**/*.xml', 'WebContent/**/*.json'])
+    gulp.src(['WebContent/**/*.js', 'WebContent/css/*.css'])
+    .pipe(watch(['WebContent/**/*.js', 'WebContent/css/*.css']))
     .pipe(connect.reload());
 });
 
 // Precompile SASS to CSS
-gulp.task('build-css', function() {
+gulp.task('sass', function() {
     gulp.src('WebContent/css/scss/*.scss')
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(gulp.dest('WebContent/css'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
     .pipe(gulp.dest('WebContent/css'));
 });
 
@@ -78,5 +85,5 @@ gulp.task('preload', function() {
 // Configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
     gulp.watch('WebContent/**/*.js', ['jshint']);
-    gulp.watch('WebContent/css/scss/*.scss', ['build-css']);
+    gulp.watch('WebContent/css/scss/*.scss', ['sass']);
 });
