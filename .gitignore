@@ -7,3 +7,4 @@ Component-preload.js
 .DS_Store
 .idea
 .log
+*.min.*
