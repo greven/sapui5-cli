@@ -4,11 +4,11 @@ This project is an application skeleton to quickly start an [SAPUI5](https://sap
 
 # Getting Started
 
-To use sapui5-seed as a bootstrap for you sapui5 / openui5 application just clone it with git to your machine or use the download link in the initial github page. 
+To use sapui5-seed as a bootstrap for you sapui5 / openui5 application just clone it with git to your machine or use the download link in the initial github page.
 
-sapui5-seed makes use of node.js and gulp to quickly run a **development server** (http://localhost:8000) with several tasks available to common needed tasks in frontend development and sapui5 (like generating the Component-preload.js). 
+sapui5-seed makes use of node.js and gulp to quickly run a **development server** (http://localhost:8000) with several tasks available to common needed tasks in frontend development and sapui5 (like generating the Component-preload.js).
 
-seed-ui5 has support to precompile SCSS into CSS with gulp (if you prefer LESS just use a correspondent gulp task).
+seed-ui5 has support to precompile SASS into CSS with gulp (if you prefer LESS just use a correspondent gulp task).
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ In order to quickly start using sapui5-seed you need to install the following de
 
 ### git
 
-You need git to clone the sapui5-seed repository. 
+You need git to clone the sapui5-seed repository.
 You can get git from [http://git-scm.com/](http://git-scm.com/).
 
 ### node.js
