@@ -5,7 +5,7 @@ sap.ui.core.UIComponent.extend("my.app.Component", {
     metadata : {
         name : "My SAPUI5 Demo App",
         version : "0.1",
-        includes : ["css/styles.css"],
+        includes : ["css/styles.min.css"],
         dependencies : {
             libs : ["sap.m", "sap.ui.layout"],
             components : []
