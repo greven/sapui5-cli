@@ -1,9 +1,9 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
 	displayBlock="true" controllerName="my.app.view.Main">
 
-	<Page title="My App" id="page" showNavButton="true">
+	<Page title="{i18n>xtit.masterTitle}" id="page" showNavButton="true">
 		<content>
-			
+
 		</content>
 	</Page>
 

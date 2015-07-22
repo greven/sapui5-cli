@@ -13,7 +13,7 @@ sap.ui.core.UIComponent.extend("my.app.Component", {
         },
 
         config : {
-            resourceBundle : "i18n/i18n.properties",
+			resourceBundle: "i18n/i18n.properties",
             titleResource: "xtit.shellTitle",
             // icon: "sap-icon://Fiori7/F1373",
 			// favIcon: "icon/icon.ico",
@@ -49,10 +49,10 @@ sap.ui.core.UIComponent.extend("my.app.Component", {
         var rootPath = jQuery.sap.getModulePath("my.app");
 
         // Set i18n model
-        // var i18nModel = new sap.ui.model.resource.ResourceModel({
-        //     bundleUrl : [rootPath, mConfig.resourceBundle].join("/")
-        // });
-        // this.setModel(i18nModel, "i18n");
+        var i18nModel = new sap.ui.model.resource.ResourceModel({
+            bundleUrl : [rootPath, mConfig.resourceBundle].join("/")
+        });
+        this.setModel(i18nModel, "i18n");
 
         // Create and set domain model to the component
         // var sServiceUrl = mConfig.serviceConfig.serviceUrl;
