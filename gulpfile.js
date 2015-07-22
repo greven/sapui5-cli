@@ -35,8 +35,12 @@ gulp.task('webserver', function() {
 
 // Watch for changes in the CSS and refresh browser
 gulp.task('livereload', function() {
-    gulp.src(['WebContent/**/*.js', 'WebContent/css/*.css'])
-    .pipe(watch(['WebContent/**/*.js', 'WebContent/css/*.css']))
+    gulp.src(['WebContent/**/*.js', 'WebContent/css/*.css',
+        'WebContent/**/*.view.*', 'WebContent/**/*.fragment.*',
+        'WebContent/**/*.properties'])
+    .pipe(watch(['WebContent/**/*.js', 'WebContent/css/*.css',
+        'WebContent/**/*.view.*', 'WebContent/**/*.fragment.*',
+        'WebContent/**/*.properties']))
     .pipe(connect.reload());
 });
 
