@@ -1,6 +1,4 @@
-# SAPUI5 Seed
-
-[![Build Status](https://travis-ci.org/greven/sapui5-seed.svg)](https://travis-ci.org/greven/sapui5-seed)
+# SAPUI5 Seed [![Build Status](https://travis-ci.org/greven/sapui5-seed.svg)](https://travis-ci.org/greven/sapui5-seed)
 
 SAPUI5 / OpenUI5  Project template to quickly start a new project.
 
