@@ -1,0 +1,26 @@
+{
+    "bitwise" : true,
+    "camelcase" : false,
+    "curly" : true,
+    "eqeqeq" : true,
+    "es3" : true,
+    "forin" : true,
+    "latedef" : "nofunc",
+    "noarg" : true,
+    "nonew" : true,
+    "plusplus" : false,
+    "quotmark" : false,
+    "undef" : true,
+    "unused" : "vars",
+    "strict" : false,
+    "globals" : {
+        "window" : false,
+        "document" : false,
+        "jQuery" : false,
+        "sap" : false,
+        "cockpit" : false,
+        "URI" : false,
+        "getCurrentAccount" : false,
+        "setTimeout" : false
+    }
+}

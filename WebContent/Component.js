@@ -14,7 +14,7 @@ sap.ui.core.UIComponent.extend("my.app.Component", {
 
         config : {
 			resourceBundle: "i18n/i18n.properties",
-            titleResource: "xtit.shellTitle",
+            titleResource: "xtit.shellTitle"
             // icon: "sap-icon://Fiori7/F1373",
 			// favIcon: "icon/icon.ico",
             // serviceConfig : {
@@ -30,16 +30,16 @@ sap.ui.core.UIComponent.extend("my.app.Component", {
         		targetAggregation: "pages",
         		targetControl: "AppContainer",
         		transition: "slide",
-        		clearTarget: false,
+        		clearTarget: false
         	},
         	routes: [
                 {
             		pattern: "",
             		name : "Main",
-            		view : "Main",
-        		 },
+            		view : "Main"
+        		 }
         	]
-        },
+        }
     },
 
     init : function() {
