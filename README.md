@@ -1,8 +1,12 @@
+# SAPUI5 Seed
+
+[![Build Status](https://travis-ci.org/greven/sapui5-seed.svg)](https://travis-ci.org/greven/sapui5-seed)
+
 SAPUI5 / OpenUI5  Project template to quickly start a new project.
 
 This project is an application skeleton to quickly start an [SAPUI5](https://sapui5.netweaver.ondemand.com/sdk/) / [OpenUI5](https://openui5.hana.ondemand.com/) app.
 
-# Getting Started
+## Getting Started
 
 To use sapui5-seed as a bootstrap for you sapui5 / openui5 application just clone it with git to your machine or use the download link in the initial github page.
 
