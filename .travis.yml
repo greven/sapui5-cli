@@ -3,16 +3,15 @@ language: node_js
 node_js:
   - "0.10"
   - "0.12"
-  
+
 branches:
   only:
     - master
 
 before_script:
   - npm install -g gulp
-  - npm install phantomjs
   - npm install -g karma
-  # - gulp build
-  # - gulp style
+  - npm install phantomjs
+  - npm install jasmine
 
-# script: gulp
+script: gulp test

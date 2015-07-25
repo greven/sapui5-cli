@@ -6,21 +6,26 @@
   "scripts": {
     "prestart": "npm install",
     "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test"
   },
   "keywords": [
-    "SAPUI5"
+    "openui5",
+    "sapui5",
+    "ui5"
   ],
   "repository": {
     "type": "git",
-    "url": "git-repo"
+    "url": "https://github.com/greven/sapui5-seed"
   },
   "author": "Nuno Moço <greven.pt@gmail.com>",
+  "contributors": [],
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-connect": "^2.2.0",
+    "gulp-jasmine": "^2.0.1",
     "gulp-jshint": "^1.11.2",
     "gulp-minify-css": "^1.2.0",
     "gulp-openui5-preload": "^0.1.0",
@@ -29,7 +34,14 @@
     "gulp-sass": "^2.0.3",
     "gulp-uglify": "^1.2.0",
     "gulp-watch": "^4.3.1",
+    "jasmine": "^2.3.1",
+    "jasmine-core": "^2.3.4",
     "jshint-stylish": "^2.0.1",
-    "merge2": "^0.3.6"
+    "karma": "^0.13.3",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-spec-reporter": "0.0.20",
+    "merge2": "^0.3.6",
+    "phantomjs": "^1.9.17"
   }
 }
