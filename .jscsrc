@@ -1,4 +1,6 @@
 {
   "preset": "node-style-guide",
-  "maximumLineLength": null
+  "maximumLineLength": null,
+  "validateLineBreaks": null,
+  "requireTrailingComma": null
 }
