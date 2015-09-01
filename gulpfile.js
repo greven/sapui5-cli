@@ -1,16 +1,17 @@
-var gulp  = require('gulp'),
-    merge = require('merge2'),
-    uglify = require('gulp-uglify'),
-    prettyData = require('gulp-pretty-data'),
-    jshint = require('gulp-jshint'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    connect = require('gulp-connect'),
-    watch = require('gulp-watch'),
-    ui5Preload = require('gulp-openui5-preload'),
-    TestServer = require('karma').Server;
+var gulp = require('gulp');
+var merge = require('merge2');
+var uglify = require('gulp-uglify');
+var prettyData = require('gulp-pretty-data');
+var jshint = require('gulp-jshint');
+var jscs = require('gulp-jscs');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var minifycss = require('gulp-minify-css');
+var rename = require('gulp-rename');
+var connect = require('gulp-connect');
+var watch = require('gulp-watch');
+var ui5Preload = require('gulp-openui5-preload');
+var TestServer = require('karma').Server;
 
 // Default task
 gulp.task('default', ['webserver', 'watch', 'livereload'], function() {
@@ -18,11 +19,9 @@ gulp.task('default', ['webserver', 'watch', 'livereload'], function() {
   gulp.start('sass');
 });
 
-// build
-gulp.task('test', function (done) {
-  new TestServer({
-    configFile: __dirname + '/karma.conf.js'
-  }, done).start();
+// Build
+gulp.task('test', function(done) {
+  new TestServer({configFile: __dirname + '/karma.conf.js'}, done).start();
 });
 
 // JShint task
@@ -30,6 +29,12 @@ gulp.task('jshint', function() {
   return gulp.src(['WebContent/Component.js', 'WebContent/**/*.js'])
   .pipe(jshint('.jshintrc'))
   .pipe(jshint.reporter('jshint-stylish'));
+});
+
+// JScs
+gulp.task('default', function() {
+  return gulp.src(['WebContent/Component.js', 'WebContent/**/*.js'])
+  .pipe(jscs());
 });
 
 // Gulp Webserver
