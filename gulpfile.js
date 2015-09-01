@@ -32,7 +32,7 @@ gulp.task('jshint', function() {
 });
 
 // JScs
-gulp.task('default', function() {
+gulp.task('jscs', function() {
   return gulp.src(['WebContent/Component.js', 'WebContent/**/*.js'])
   .pipe(jscs());
 });
