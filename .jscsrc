@@ -2,5 +2,6 @@
   "preset": "node-style-guide",
   "maximumLineLength": null,
   "validateLineBreaks": null,
-  "requireTrailingComma": null
+  "requireTrailingComma": null,
+  "requireCapitalizedComments": null
 }
