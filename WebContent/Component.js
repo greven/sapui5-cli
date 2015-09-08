@@ -1,5 +1,5 @@
-jQuery.sap.declare("my.app.Component");
-jQuery.sap.require("sap.m.routing.RouteMatchedHandler");
+jQuery.sap.declare('my.app.Component');
+jQuery.sap.require('sap.m.routing.RouteMatchedHandler');
 
 sap.ui.core.UIComponent.extend("my.app.Component", {
 
