@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var merge = require('merge2');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
 var prettyData = require('gulp-pretty-data');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
@@ -11,7 +11,7 @@ var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 var watch = require('gulp-watch');
 var ui5Preload = require('gulp-openui5-preload');
-var TestServer = require('karma').Server;
+// var TestServer = require('karma').Server;
 
 // Default task
 gulp.task('default', ['webserver', 'watch', 'livereload'], function() {
@@ -19,10 +19,11 @@ gulp.task('default', ['webserver', 'watch', 'livereload'], function() {
   gulp.start('sass');
 });
 
+// TODO: Implement testing
 // Build
-gulp.task('test', function(done) {
-  new TestServer({configFile: __dirname + '/karma.conf.js'}, done).start();
-});
+// gulp.task('test', function(done) {
+//   new TestServer({configFile: __dirname + '/karma.conf.js'}, done).start();
+// });
 
 // JShint task
 gulp.task('jshint', function() {
@@ -71,10 +72,11 @@ gulp.task('sass', function() {
 // SAPUI5 Component Preload
 gulp.task('preload', function() {
   return merge(
+    // TODO: Uglify is giving an error... disabled for now.
     // JS Files
-    gulp.src([
-      'WebContent/**/*.js'
-    ]).pipe(uglify()),
+    // gulp.src([
+    //   'WebContent/**/*.js'
+    // ]).pipe(uglify()),
 
     // XML Files
     gulp.src([
