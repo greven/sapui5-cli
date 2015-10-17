@@ -1,7 +1,7 @@
 {
-  "preset": "node-style-guide",
-  "maximumLineLength": null,
-  "validateLineBreaks": null,
-  "requireTrailingComma": null,
-  "requireCapitalizedComments": null
+  "preset": "jquery",
+  "requireSpacesInsideParentheses": false,
+  "disallowSpacesInsideParentheses": true,
+  "requirePaddingNewLinesBeforeLineComments": false,
+  "requireSpacesInsideBrackets": false
 }

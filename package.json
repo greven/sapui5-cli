@@ -2,7 +2,7 @@
   "name": "sapui5-seed",
   "version": "0.0.1",
   "description": "SAPUI5 Project Template",
-  "main": "WebContent/index.html",
+  "main": "webapp/index.html",
   "scripts": {
     "prestart": "npm install",
     "start": "gulp",
