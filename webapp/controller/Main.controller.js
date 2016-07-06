@@ -5,6 +5,5 @@ sap.ui.define([
 
 	return Controller.extend("my.app.controller.Main", {
 
-	});
-
+  });
 });
