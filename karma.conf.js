@@ -1,21 +1,10 @@
 module.exports = function(config) {
   config.set({
-
     basePath: '',
 
     frameworks: ['jasmine'],
 
-    files: [
-      'WebContent/index.html',
-      'WebContent/Component.js',
-      'WebContent/**/*.js',
-      'test/**/*.js'
-    ],
-
-    // list of files to exclude
-    exclude: [
-      'WebContent/Component-preload.js'
-    ],
+    files: ['test/unit/index.js'],
 
     preprocessors: {
 
@@ -43,6 +32,6 @@ module.exports = function(config) {
     ],
 
     // Continuous Integration mode
-    singleRun: false
+    singleRun: true
   });
 };
