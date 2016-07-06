@@ -20,7 +20,6 @@
   "author": "Nuno Moço <greven.pt@gmail.com>",
   "contributors": [],
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
