@@ -30,13 +30,16 @@
   "author": "Nuno Freire",
   "license": "MIT",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=8.0",
+    "npm": ">=5.0"
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "commander": "^2.11.0"
+    "commander": "^2.11.0",
+    "eslint": "^4.19.1"
   },
   "devDependencies": {
-    "chalk": "^2.3.0"
+    "chalk": "^2.3.0",
+    "eslint-config-google": "^0.9.1"
   }
 }
