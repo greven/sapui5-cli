@@ -1,0 +1,42 @@
+{
+  "name": "sapui5-cli",
+  "version": "2.0.0",
+  "description": "Scaffolding for SAPUI5 / OpenUI5 based projects made simple.",
+  "preferGlobal": true,
+  "bin": {
+    "ui5": "bin/ui5",
+    "ui5-init": "bin/ui5-init",
+    "ui5-list": "bin/ui5-list",
+    "ui5-versions": "bin/ui5-versions"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "homepage": "https://github.com/greven/sapui5-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greven/sapui5-cli"
+  },
+  "keywords": [
+    "sapui5",
+    "openui5",
+    "sap",
+    "ui5",
+    "spa"
+  ],
+  "bugs": {
+    "url": "https://github.com/greven/sapui5-cli/issues"
+  },
+  "author": "Nuno Freire",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "commander": "^2.11.0"
+  },
+  "devDependencies": {
+    "chalk": "^2.3.0"
+  }
+}

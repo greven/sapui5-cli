@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+const chalk = require('chalk')
+const program = require('commander')
+const path = require('path')
+const file = require('../lib/file')
+
+const ROOT = path.resolve(__dirname, '../')
+const templatesPath = path.join(ROOT, '/templates')
+
+/**
+ * Padding.
+ */
+
+console.log()
+process.on('exit', () => {
+  console.log()
+})
+
+/**
+ * List templates.
+ */
+
+const templates = file.getDirectories(templatesPath)
+
+if (templates.length) {
+  console.log('  Available templates:')
+  console.log()
+
+  templates.forEach(directory => {
+    let meta = require(path.join(directory, '/meta.json'))
+    console.log(
+      '  ' + chalk.red('✔') +
+      '  ' + chalk.yellow(meta.name) +
+      ' - ' + meta.description)
+  })
+} else {
+  console.log('No Available templates')
+  console.log()
+}
+
+

@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+const chalk = require('chalk')
+const program = require('commander')
+const ui5 = require('../lib/ui5')
+
+/**
+ * Padding.
+ */
+
+console.log()
+process.on('exit', () => {
+  console.log()
+})
+
+/**
+ * List ui5 versions.
+ */
+
+ui5.versions()
+  .then(versions => {
+    if (versions.length) {
+      console.log('  Major UI5 versions:')
+      console.log()
+
+      versions.forEach(element => {
+        console.log(
+          '  ' + chalk.red('✔') +
+          '  ' + chalk.yellow(element.version) +
+          ' - ' + element.support)
+      })
+    } else {
+      console.log('Couldn\'t retrieve versions' )
+      console.log()
+    }
+  })
